@@ -1,38 +1,266 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
   }
+  /* CONSTANTS */
+  :root {
+    --color-1: rgb(16, 140, 172);
+    --color-2: rgb(161, 50, 115);
+    --nav-color: rgb(49, 49, 49);
+    --bg-color-1: rgb(49, 49, 49);
+    --border-color: rgb(214, 214, 214);
+  }
+  h1 {
+    font-size: 1.9rem !important; 
+  }
+  h2 {
+    font-size: 1.7rem !important; 
+  }
+  h3 {
+    font-size: 1.5rem !important; 
+  }
+  h4 {
+    font-size: 1.3rem !important; 
+  }
+  h5 {
+    font-size: 1.2rem !important; 
+  }
+  p{
+    font-size: 1rem !important;
+    font-weight: 400;
+  }
+  .small-font{
+    font-size: 0.8rem !important;
+    padding: 0.1rem 0;
+  }
+  /* CONSTANTS ENDS*/
+
+  /* Navbar Starts */
+.navbar {
+    background-color: var(--nav-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    flex-wrap: wrap;
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar li{
+    list-style-type: none;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar .a-link{ 
+    color: white;
+    transition: 0.4s ease;
+    padding: 0.5rem;    
+    text-decoration: none;
+}
+
+.navbar .a-link:hover {
+    color: var(--color-1);
+}
+
+.navbar .para-font{    
+    font-size: 1rem;
+}
+/* Navbar Ends */
+  
+  
+  .main {
+    min-height: 100vh;
+    background-color: rgb(248, 248, 248);
+    position: relative;
+  }
+  
+  .input-card{
+    background-color: white;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 0.5rem;
+  }
+  
+  .w-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+  }  
+  .light-text {
+    color: rgb(75, 75, 75);
+  }
+  
+  .box-shadow{
+    box-shadow: 0 0 10px rgb(167, 167, 167);
+  }
+  
+  /* Section Starts */
+  .w-scale {
+    width: 85%;
+    margin: auto;
+  }
+
+  .bg-color-1{
+    background-color: var(--nav-color);
+  }
+
+  .light-border{
+    border: 1px solid rgb(207, 207, 207);
+  }
+  
+
+.blog-card{
+  width: 100%;
+  background-color: var(--bg-color-1);
+  color: rgb(235, 227, 227);
+  box-shadow: 0 0 3px rgb(105, 105, 105);
+  border-radius: 0.5rem;
+}
+
+  
+.button {
+  padding: 0.5rem 1.2rem;
+  background-color: rgb(224, 217, 217);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  color: var(--bg-color-1);
+  transition: 0.4s ease;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-1);
+}
+
+.button-dark{
+  background-color: var(--bg-color-1);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.button-dark:hover{
+  background-color: var(--color-1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.background-dark{
+  background-color: rgba(0, 0, 0, 0.3);
 }
+
+.input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border: 2px solid var(--border-color);
+  box-sizing: border-box;
+  padding: 0.4rem 0.8rem;
+  color: black;
+  background-color: white;    
+  border-radius: 5px;
+}
+.text-area-input{
+  min-height: 15vh;
+}
+.edit-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border: 2px solid var(--border-color);
+  box-sizing: border-box;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  background-color: transparent;    
+  border-radius: 5px;
+}
+.input:focus {
+  border: 2px solid var(--color-1);
+}
+.text-area-input:focus{
+  border: 2px solid var(--color-1);
+}
+.edit-input:focus{
+  border: 2px solid var(--color-1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  /* Footer Ends */
+  
+  @media only screen and (max-width: 1400px) {
+    .outer-box {
+        width: calc(100%/3);
+    }
+  
+    .w-scale-form{
+        width: 60%;
+    }
+  }
+  
+  @media only screen and (max-width: 1100px) {
+    .w-scale {
+        width: 85%;
+    }
+  
+    .outer-box {
+        width: calc(100%/2);
+        padding: 0.5rem;
+    }
+  
+    .w-scale-form{
+        width: 75%;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .w-scale {
+        width: 95%;
+    }
+  
+    
+    .w-scale-form{
+        width: 95%;
+    }
+  
+    .outer-box {
+        width: 100%;
+    }  
+  
+  
+  }
+  
